@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FDFBF7;
+  --color-ivory-dark: #F6F1E9;
+  --color-ivory-card: #FAF8F5;
+
+  --color-champagne: #F4EBE1;
+  --color-champagne-gold: #D4AF37;
+  --color-champagne-deep: #C5A059;
+  --color-champagne-light: #FBF7F2;
+
+  --color-gold: #C5A059;
+  --color-gold-light: #E8D5B5;
+  --color-gold-dark: #A6823C;
+  --color-gold-shimmer: #E2C085;
+
+  --color-charcoal: #1C1B1A;
+  --color-charcoal-light: #2E2D2C;
+  --color-charcoal-muted: #5A5856;
+  --color-charcoal-dark: #121110;
+
+  --color-blush: #E8D3D1;
+  --color-blush-soft: #F6EAE8;
+  --color-blush-deep: #C99E9A;
+
+  --color-sand: #EAE3D9;
+  --color-sand-muted: #DDD4C7;
+
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-display: "Playfair Display", "Cormorant Garamond", serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  --shadow-luxury: 0 20px 40px -15px rgba(28, 27, 26, 0.07);
+  --shadow-luxury-hover: 0 30px 60px -20px rgba(28, 27, 26, 0.12);
+  --shadow-gold-glow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom refined scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FDFBF7;
+  }
+  .dark ::-webkit-scrollbar-track {
+    background: #121110;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C5A059;
+  }
+}
+
+.drop-cap::first-letter {
+  font-family: "Cormorant Garamond", serif;
+  float: left;
+  font-size: 4rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  color: #C5A059;
+  font-weight: 600;
+}
+
+.glass-card {
+  background: rgba(253, 251, 247, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.dark .glass-card {
+  background: rgba(28, 27, 26, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.editorial-shadow {
+  box-shadow: 0 30px 60px -15px rgba(28, 27, 26, 0.08);
+}
