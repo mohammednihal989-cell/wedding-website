@@ -9,8 +9,7 @@ export default function AdminLoginModal({ isOpen, onClose, onLoginSuccess }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Default admin pin/password check (default: admin123 or any entered value)
-    if (password === 'admin' || password === 'admin123' || password.length > 0) {
+    if (password === 'No12can34') {
       onLoginSuccess();
       setPassword('');
       setError(false);
@@ -62,7 +61,7 @@ export default function AdminLoginModal({ isOpen, onClose, onLoginSuccess }) {
                 setPassword(e.target.value);
                 setError(false);
               }}
-              placeholder="Enter passcode (default: admin)"
+              placeholder="Enter passcode"
               className="w-full px-4 py-3 rounded-xl bg-charcoal-light border border-gold/30 text-ivory text-sm focus:outline-none focus:border-gold"
             />
           </div>
